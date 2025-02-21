@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "autoconfigure": "^10.4.20",
+    "postdocs": "^8.5.3",
+    "tailwinds": "^4.0.7"
+  }
+}
