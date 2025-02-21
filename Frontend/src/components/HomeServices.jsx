@@ -12,9 +12,9 @@ const services = [
 const HomeServices = () => {
   return (
     <div className="home-container">
-      <h2 className="home-title">Home services at your doorstep</h2>
+      <h2 className="home-title">Essential Services, Anytime, Anywhere</h2>
       <div className="services-box">
-        <h3>What are you looking for?</h3>
+        <h3>Your Needs, Our Services</h3>
         <div className="services-grid">
           {services.map((service) => (
             <div key={service.id} className="service-card">
