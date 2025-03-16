@@ -5,7 +5,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
-import java.util.List;
 
 @Document(collection = "payments")
 @Data
@@ -15,10 +14,15 @@ public class Payment {
     @Id
     private ObjectId _id;
     private ObjectId booking_id;
-    private String user_id;
+    private ObjectId user_id;  // Changed to ObjectId for consistency
     private double amount;
-    private List<String> paymentMethod;
+    private String payment_method;  // Single payment method (CREDIT_CARD, DEBIT_CARD, UPI, WALLET, etc.)
     private String transaction_id;
-    private List<String> paymentStatus;
+    private String payment_status;  // Single status (PENDING, PROCESSING, COMPLETED, FAILED, REFUNDED)
+    private String failure_reason;  // Reason if payment failed
+    private String payment_gateway;  // Gateway used for transaction
+    private String refund_id;  // ID for refund if applicable
+    private Timestamp payment_date = new Timestamp(System.currentTimeMillis());
     private Timestamp created_at = new Timestamp(System.currentTimeMillis());
+    private Timestamp updated_at = new Timestamp(System.currentTimeMillis());
 }
