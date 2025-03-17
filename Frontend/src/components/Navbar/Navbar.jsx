@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaSearch, FaShoppingCart, FaUser, FaClipboardList, FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
-import "../styles/Navbar.css";
+import "./Navbar.css";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
