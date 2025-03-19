@@ -1,10 +1,18 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import HomeServices from "./components/HomeServices/HomeServices";
+import Home from "./Pages/Home";
+import ServiceDetail from "./Pages/ServiceDetail/ServiceDetail";
+
 function App() {
   return (
     <>
       <Navbar />
-      <HomeServices></HomeServices>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* This route will handle both main services and subservices */}
+        <Route path="/services/:serviceId" element={<ServiceDetail />} />
+      </Routes>
     </>
   );
 }

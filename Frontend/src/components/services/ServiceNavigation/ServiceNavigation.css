@@ -1,0 +1,39 @@
+.service-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.service-navigation button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.service-navigation button:hover {
+  background-color: #f0f0f0;
+}
+
+.service-navigation img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.service-navigation p {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  color: #333;
+}
