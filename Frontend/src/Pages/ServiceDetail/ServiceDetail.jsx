@@ -10,12 +10,8 @@ import "./ServiceDetail.css";
 
 const ServiceDetail = () => {
   const { serviceId } = useParams();
-
-  // Find the main service or subservice that matches the ID
   let service = services.find(s => s.id === parseInt(serviceId) || s.path.includes(serviceId));
   let subService = null;
-
-  // If not found directly, check if it's a subservice ID
   if (!service) {
     for (const mainService of services) {
       const foundSubService = mainService.subServices.find(sub => sub.id === serviceId);
